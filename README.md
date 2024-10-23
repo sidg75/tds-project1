@@ -17,7 +17,8 @@ Invoked GitHub APIs, using Collab(python), to scrape user and repository informa
 - Additional analysis can be performed to explore patterns between user activity and repository languages, company affiliations or top open-source contributors
 - I also would like to better understand year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
 - Any growing trends between languages and commits, users growth etc
-  
+![alt text](https://github.com/sidg75/tds-project1/blob/main/users_trend_by_years.png)
+
 ## (Extra optional read)
 ### Details and related steps
 1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters involved. Since GitHub has restrictive Rate limits, I created a [personal API token](https://github.com/settings/personal-access-tokens/new), to help with higher requests limit(5000/hr), for the authorized users
