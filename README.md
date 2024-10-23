@@ -1,44 +1,32 @@
 # tds-project1
-[Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
-Roll No# 22f3003031
+- [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
+- **Roll No#** 22f3003031
 
-
-## Overview
-
-This project involves gathering user data from the GitHub API for users located in Sydney with over 100 followers. The script then scrapes detailed information about each user's public repositories. The data collected is organized into two CSV files: `users.csv` and `repositories.csv`.
-
-
+This was my first TDS project as part of IITM assignment and offered great experience. It involved gathering user and their repositoties data from the GitHub API and organizing them into two separate CSV files. Once done, assignment had few followup questions on the collected data
 
 ## How I scraped the data?
-1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters
-2. JSON data format was used for response
-3. First, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was paginated, we introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users)
-4. Seondly, for each user found, we iterated and invoked a secondary API to retrieve their detailed information and public repository data
-5. Given the assignment instructions, data on repositories was collected for up to 500 of the most recently pushed repositories per user. This was acheived by looping through repo List object and ensuring we are below 500
-6. On completion, over 371 users were scraped, and 32416 associated repositories
+Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored in CSV files for further analysis in Google Sheets.
 
-## Few activities I performed after better understanding the project/assignment details - 
-1) Assessment 1 - Data access through API's usually have Rate limits established by providers. Does GitHUb has any such restrictions? 
-2) So I created a [personal API token](https://github.com/settings/personal-access-tokens/new), given the higher access limit(5000/hr) for authorized users
-3) Access whether data is paginated. If not, I'll have to loop through all pages. Github documentation offered detailed insights [here] (https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28)
-
-## Interesting and Surprising facts I found after analysing the data?
-
-- The data was scraped using the GitHub API, fetching users in Sydney with over 100 followers, followed by detailed information on each user's public repositories.
-- The most surprising fact was how many high-profile users had a very low number of repositories despite a large follower count.
-- Developers should focus on building more repositories that showcase their skills, as follower count alone doesn't necessarily reflect active project involvement.
-- Through analyzing the data, it was observed that some users with a large follower base had surprisingly few repositories, which may indicate that GitHub followers don’t always correlate to repository activity.
+## Interesting and Surprising facts I found after analysing the data
+- Quality over quantity?: Many high-profile users have a very low number of repositories despite a large follower count
+- COVID-19 impact?: Year 2021 was a breakout year. Huge spike in new repos, followers etc. Did COVID-19 led to more developers working remotely and engaging in personal or open-source projects. Or was it the launch of GitHub copilot that year?
+- JavaScript dominance?: With 167,565 stars, JS rules Sydney's GitHub (suggesting strong web development uptake?). This may also be since users from web company Atlassian and Canva are top contributors?
+- Weak corelation: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
 
 ## An actionable recommendation for developers based on your analysis
-
-Additional analysis can be performed to explore patterns between user activity and repository languages, license types, or stargazer counts. Further filtering could also focus on more specific user categories, such as company affiliations or top open-source contributors.
-
-### Data collection insights
-
-
-3. Missed the ‘pagination’ aspect earlier and later incorporated it, for data completeness
-5. Used a free LLM chatbot to improve my code/understanding
+- Additional analysis can be performed to explore patterns between user activity and repository languages, company affiliations or top open-source contributors
+- I also would like to better understand year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
+- Any growing trends between languages and commits, users growth etc
+  
+## Details and related steps
+1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters involved. Since GitHub has restrictive Rate limits, I created a [personal API token](https://github.com/settings/personal-access-tokens/new), to help with higher requests limit(5000/hr), for the authorized users
+2. First, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was [paginated](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28), I introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users). This data was written to _users.csv_ file
+3. Seondly, for each user found, we iterated and invoked a secondary API to retrieve their detailed information and public repository data
+4. Given the assignment instructions, data on repositories was collected for up to 500 of the most recently pushed repositories per user. This was acheived by looping through repo List object and ensuring we are below 500. This data was written to _repositories.csv_ file
+5. On completion, over 371 users were scraped, and 32415 associated repositories
+6. I later uploaded these CSV files to Google Sheets for data analysis
 
 ### Files Generated:
-- **users.csv**: Contains key information about each user such as their GitHub login, name, company, location (city), email, and number of repositories, followers, and followings.
-- **repositories.csv**: Contains the public repositories for each user, including details like repository name, creation date, programming language, and license.
+- **users.csv**: Contains key information about each user such as their GitHub login, name, company, location (city), email, and number of repositories, followers, and followings
+- **repositories.csv**: Contains the public repositories for each user, including details like repository name, creation date, programming language, and license
+
