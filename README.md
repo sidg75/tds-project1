@@ -2,7 +2,7 @@
 - [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
 - **Roll No#** 22f3003031
 
-This was my first TDS project as part of IITM assignment and offered great experience. It involved gathering user and their repositoties data from the GitHub API and organizing them into two separate CSV files. Once done, assignment had few followup questions on the collected data
+This project involved scraping GitHub user's and their repositoties data via API. Data was organized into two separate CSV files, and used for data analysis via Google Sheets
 
 ## How I scraped the data?
 Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored in CSV files for further analysis in Google Sheets.
@@ -18,7 +18,8 @@ Invoked GitHub APIs, using Collab(python), to scrape user and repository informa
 - I also would like to better understand year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
 - Any growing trends between languages and commits, users growth etc
   
-## Details and related steps
+## (Extra optional read)
+### Details and related steps
 1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters involved. Since GitHub has restrictive Rate limits, I created a [personal API token](https://github.com/settings/personal-access-tokens/new), to help with higher requests limit(5000/hr), for the authorized users
 2. First, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was [paginated](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28), I introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users). This data was written to _users.csv_ file
 3. Seondly, for each user found, we iterated and invoked a secondary API to retrieve their detailed information and public repository data
