@@ -7,10 +7,15 @@ Roll No# 22f3003031
 
 This project involves gathering user data from the GitHub API for users located in Sydney with over 100 followers. The script then scrapes detailed information about each user's public repositories. The data collected is organized into two CSV files: `users.csv` and `repositories.csv`.
 
+
+
 ## How I scraped the data?
-1. The GitHub API was used to search for users located in Sydney with over 100 followers. This search was paginated to ensure all qualifying users were collected.
-2. For each user found, a secondary API call was made to retrieve their detailed information and public repository data.
-3. Data on repositories was collected for up to 500 of the most recently pushed repositories per user.
+1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters
+2. JSON data format was used for response
+3. First, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was paginated, we introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users)
+4. Seondly, for each user found, we iterated and invoked a secondary API to retrieve their detailed information and public repository data
+5. Given the assignment instructions, data on repositories was collected for up to 500 of the most recently pushed repositories per user. This was acheived by looping through repo List object and ensuring we are below 500
+6. On completion, over 371 users were scraped, and 32416 associated repositories
 
 ## Few activities I performed after better understanding the project/assignment details - 
 1) Assessment 1 - Data access through API's usually have Rate limits established by providers. Does GitHUb has any such restrictions? 
@@ -29,8 +34,8 @@ This project involves gathering user data from the GitHub API for users located 
 Additional analysis can be performed to explore patterns between user activity and repository languages, license types, or stargazer counts. Further filtering could also focus on more specific user categories, such as company affiliations or top open-source contributors.
 
 ### Data collection insights
-1. Over 371 users were scraped, and 32416 associated repositories, based on the provided search criteria ("scrape all GitHub users in the city of Sydney with over 100 followers, and their repositories", "for these users, fetch up to the 500 most recently pushed repositories")
-2. I fetched the response in JSON format, which was well structured. GitHub also provided detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this
+
+
 3. Missed the ‘pagination’ aspect earlier and later incorporated it, for data completeness
 5. Used a free LLM chatbot to improve my code/understanding
 
