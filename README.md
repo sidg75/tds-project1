@@ -4,22 +4,22 @@
 
 This project involved scraping GitHub user's and their repositoties data via API. Data was organized into two separate CSV files, and used for data analysis via Google Sheets
 
-## How I scraped the data?
+## 1. How I scraped the data?
 Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored in CSV files for further analysis in Google Sheets.
 
-## Interesting and Surprising facts I found after analysing the data
+## 2. Interesting and Surprising facts I found after analysing the data
 - **Quality over quantity?**: Many high-profile users have a very low number of repositories despite a large follower count
 - **COVID-19 impact?**: Year 2021 was a breakout year. Huge spike in new repos, followers etc. Did COVID-19 led to more developers working remotely and engaging in personal or open-source projects. Or was it the launch of GitHub copilot that year?
 - **JavaScript dominance?**: With 167,565 stars, JS rules Sydney's GitHub (suggesting strong web development uptake?). This may also be since users from web company Atlassian and Canva are top contributors?
 - **Weak corelation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
 
-## An actionable recommendation for developers based on your analysis
+## 3. An actionable recommendation for developers based on your analysis
 - Additional analysis can be performed to explore patterns between user activity and repository languages, company affiliations or top open-source contributors
 - I also would like to better understand year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
 - Any growing trends between languages and commits, users growth etc
 ![alt text](https://github.com/sidg75/tds-project1/blob/main/users_trend_by_years.png)
 
-## (Extra optional read)
+## Extra optional read (for reference only)
 ### Details and related steps
 1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters involved. Since GitHub has restrictive Rate limits, I created a [personal API token](https://github.com/settings/personal-access-tokens/new), to help with higher requests limit(5000/hr), for the authorized users
 2. First, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was [paginated](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28), I introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users). This data was written to _users.csv_ file
