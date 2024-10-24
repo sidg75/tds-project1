@@ -2,10 +2,10 @@
 - [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
 - **Roll No#** 22f3003031
 
-This project involved scraping GitHub's user and repositories data via API, for data analysis
+This project involved scraping GitHub's user and repositories data via API, for analysis
 
 ## 1. How did I scraped the data?
-Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored in CSV files for further analysis in Google Sheets.
+Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored into two CSV files for further analysis in Google Sheets
 
 ## 2. Interesting and Surprising facts I found after analysing the data
 - **Quality over quantity?**: Many high-profile users have a very low number of repositories despite a large follower count
