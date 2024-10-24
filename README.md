@@ -8,7 +8,7 @@ This project involved scraping GitHub's user and repositories data via API, for 
 Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored into two CSV files for further analysis in Google Sheets
 
 ## 2. Interesting and Surprising facts I found after analysing the data
-- **JavaScript dominance?**: With 167,565 stars, JS rules Sydney's GitHub (suggesting strong web development uptake?). This may also be since users from web company Atlassian and Canva are top contributors?
+- **JavaScript dominance?**: With 167,565 stars, JavaScript rules Sydney's GitHub languages. This points to strong web-development uptake, especially since users from web company Atlassian and Canva are top contributors
 - **COVID-19 impact?**: Year 2021 was a breakout year. Huge spike in new repos, followers etc. Did COVID-19 lead to more developers working remotely and engaging in personal or open-source projects. Or was it the launch of GitHub copilot that year?
 - **Quality over quantity?**: Many top users have a very low number of repositories despite a large follower count
 - **Weak correlation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
