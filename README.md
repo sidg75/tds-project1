@@ -9,14 +9,14 @@ Invoked GitHub APIs, using Collab(python), to scrape user and repository informa
 
 ## 2. Interesting and Surprising facts I found after analysing the data
 - **JavaScript dominance?**: With 167,565 stars, JavaScript rules Sydney's GitHub languages. This points to strong web-development uptake, especially since users from web company Atlassian and Canva are top contributors
-- **COVID-19 impact?**: Year 2021 was a breakout year. Huge spike in new repos, followers etc. Did COVID-19 lead to more developers working remotely and engaging in personal or open-source projects. Or was it the launch of GitHub copilot that year?
+- **COVID-19 impact?**: In last 16 years, year 2021 was a breakout year. It saw huge spike in new repos, followers etc. But why? Did COVID-19 lead to more developers working remotely and engaging in personal or open-source projects? Or was it the launch of GitHub copilot that year?
 - **Quality over quantity?**: Many top users have a very low number of repositories despite a large follower count
 - **Weak correlation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
 
 ## 3. An actionable recommendation for developers based on your analysis
 - Additional analysis can be performed to explore patterns between user activity and repository languages, company affiliations or top open-source contributors
-- I also would like to better understand year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
-- Any growing trends between languages and commits, users growth etc
+- We should also analyse year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
+- It would be interesting to identify any growing trends between languages and commits, users growth etc
 ![alt text](https://github.com/sidg75/tds-project1/blob/main/users_trend_by_years.png)
 
 ## Extra optional read (for reference only)
