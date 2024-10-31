@@ -1,11 +1,12 @@
 # tds-project1
 - [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
-- **Roll No#** 22f3003031
-
-This project involved scraping GitHub's user and repositories data via API, for analysis
+- Objective: To scrape and analyse GitHub's users in Sydney and their repositories data
 
 ## 1. How did I scraped the data?
-Invoked GitHub APIs, using Collab(python), to scrape user and repository information. The data was collected and stored into two CSV files for further analysis in Google Sheets
+Colab(python) script was created to - 
+- fetch the data - via invocation of multiple GitHub APIs, like 'GET /search/users' 'GET /users/{userId}/repos'
+- process the data - like stripping whitespaces, removing leading '@' symbols etc, and
+- store the data into two separate CSV files for further analysis
 
 ## 2. Interesting and Surprising facts I found after analysing the data
 - **COVID-19 impact?**: In last 16 years, year 2021 was a breakout year. It saw huge spike in new repos, followers etc. But why? Did COVID-19 lead to more developers working remotely and engaging in personal or open-source projects? Or was it the launch of GitHub copilot that year? (image below)
