@@ -14,10 +14,10 @@ Colab(python) script was created to perform 3 major steps -
 - **Quality over quantity?**: Many top users have a very low number of repositories despite a large follower count
 - **Weak correlation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
 
-## 3. An actionable recommendation for developers based on your analysis
+## 3. An actionable recommendation for developers based on analysis
+- to improve quality of their repos via better code, clear guidelines on usage and collaboration, regular updates etc. This may lead to improved uptake on followers and community visibility
+- there's a weak negative regression slope of -9.72 between developer's bio and number of followers ((as the length of the bio increases, the number of followers tends to decrease.). It is suggested to keep bios shorter 
 - Additional analysis can be performed to explore patterns between user activity and repository languages, company affiliations or top open-source contributors
-- We should also analyse year 2021 spike. Was it only due to pandemic driven demand, or did any key events happened like mergers, startup growth, Github copilot launch etc
-- It would be interesting to identify any growing trends between languages and commits, users growth etc
 ![alt text](https://github.com/sidg75/tds-project1/blob/main/users_trend_by_years.png)
 
 ## Extra optional read (for reference only)
