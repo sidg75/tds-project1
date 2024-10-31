@@ -4,9 +4,9 @@
 
 ## 1. How did I scrape the data?
 Colab(python) script was created to perform 3 major steps - 
-- fetch the data - via invocation of multiple GitHub APIs, like `GET /search/users` `GET /users/{userId}/repos`
-- process the data - like stripping whitespaces, removing leading `@` symbols etc, and
-- store the data - into two separate CSV files for further analysis
+1. fetch the data - via invocation of multiple GitHub APIs, like `GET /search/users` `GET /users/{userId}/repos`
+2. process the data - like stripping whitespaces, removing leading `@` symbols etc, and
+3. store the data - into two separate CSV files for further analysis
 
 ## 2. Interesting and Surprising facts I found after analysing the data
 - **COVID-19 impact?**: In the last 16 years of GitHub's history, year 2021 was a breakout year (refer graph below). It saw huge spike in creation of new repos and followers. It may be due to COVID-19 pandemic leading more developers to be working remotely and engaging in personal or open-source projects. Also, it coincides with the increased adoption of [GitHub Copilot(AI) that year](https://trends.google.com/trends/explore?date=today%205-y&q=github%20copilot&hl=en)
