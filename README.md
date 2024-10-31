@@ -1,6 +1,6 @@
-# tds-project1
-- [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
+# TDS-Project[1]:  GitHub User and Repository Analysis
 - Objective: To scrape and analyse GitHub's users in Sydney and their repositories data
+- [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
 
 ## 1. How did I scraped the data?
 Colab(python) script was created to - 
