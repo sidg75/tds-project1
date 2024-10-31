@@ -20,14 +20,14 @@ Colab(python) script was created to perform 3 major steps -
 - developers must consider adopting MIT licenses for their repos. This has greatest adoption in Sydney region (may be since it's a very permissive license that allows users to do almost anything they want with your code, including using it in commercial products)
 ![alt text](https://github.com/sidg75/tds-project1/blob/main/users_trend_by_years.png)
 
-## Extra optional read (for reference only)
+## Optional read (for reference only)
 ### Details and related steps
-1. Created a Collab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters involved. Since GitHub has restrictive Rate limits, I created a [personal API token](https://github.com/settings/personal-access-tokens/new), to help with higher requests limit(5000/hr), for the authorised users
-2. First, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was [paginated](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28), I introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users). This data was written to _users.csv_ file
-3. Secondly, for each user found, we iterated and invoked a secondary API to retrieve their detailed information and public repository data
+1. Created a Colab notebook(python) to scrape GitHub data via APIs. GitHub has detailed [API guide](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api?apiVersion=2022-11-28) on this which helped understand the structure and parameters involved. Since GitHub has restrictive Rate limits, I created a [personal API token](https://github.com/settings/personal-access-tokens/new), to help with higher requests limit(5000/hr)
+2. To fetch the data, the [Search API](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28) was used to search for users located in Sydney with over 100 followers(_location:Sydney followers:>100_). As the API response was [paginated](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28), I introduced necessary code changes (_per_page=100 and page parameter_) to ensure all qualifying users were fetched. To validate my results and the API fetch count, I reconfirmed it via searching directly on the [website](https://github.com/search?q=location%3ASydney%20followers%3A%3E100&type=users). This data was written to _users.csv_ file
+3. Thereafter, for each user found, we iterated and invoked a secondary API to retrieve their detailed information and associated public repository data
 4. Given the assignment instructions, data on repositories was collected for up to 500 of the most recently pushed repositories per user. This was achieved by looping through the repo List object and ensuring we are below 500. This data was written to _repositories.csv_ file
-5. On completion, over 371 users were scraped, and 32415 associated repositories
-6. I later uploaded these CSV files to Google Sheets for data analysis
+5. On completion, over 371 users were scraped, and their 32415 associated repositories
+6. For data insights, I leveraged Pandas and Google Sheets, using these 2 base CSVs
 
 ### Files Generated:
 - **users.csv**: Contains key information about each user such as their GitHub login, name, company, location (city), email, and number of repositories, followers, and followings
