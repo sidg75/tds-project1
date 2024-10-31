@@ -1,5 +1,5 @@
 # TDS-Project[1]:  GitHub User and Repository Analysis
-- Objective: To scrape and analyse GitHub's users in Sydney and their repositories data
+- Objective: To scrape and analyse popular GitHub's users in Sydney and their repositories data
 - [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
 
 ## 1. How did I scrape the data?
