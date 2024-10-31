@@ -4,8 +4,8 @@
 
 ## 1. How did I scrape the data?
 Colab(python) script was created to perform 3 major steps - 
-- fetch the data - via invocation of multiple GitHub APIs, like 'GET /search/users' 'GET /users/{userId}/repos'
-- process the data - like stripping whitespaces, removing leading '@' symbols etc, and
+- fetch the data - via invocation of multiple GitHub APIs, like `GET /search/users` `GET /users/{userId}/repos`
+- process the data - like stripping whitespaces, removing leading `@` symbols etc, and
 - store the data - into two separate CSV files for further analysis
 
 ## 2. Interesting and Surprising facts I found after analysing the data
