@@ -2,14 +2,14 @@
 - Objective: To scrape and analyse GitHub's users in Sydney and their repositories data
 - [Quiz ID: Sydney:100](https://tools-in-data-science.pages.dev/project1)
 
-## 1. How did I scraped the data?
-Colab(python) script was created to - 
+## 1. How did I scrape the data?
+Colab(python) script was created to perform 3 major steps - 
 - fetch the data - via invocation of multiple GitHub APIs, like 'GET /search/users' 'GET /users/{userId}/repos'
 - process the data - like stripping whitespaces, removing leading '@' symbols etc, and
-- store the data into two separate CSV files for further analysis
+- store the data - into two separate CSV files for further analysis
 
 ## 2. Interesting and Surprising facts I found after analysing the data
-- **COVID-19 impact?**: In last 16 years, year 2021 was a breakout year. It saw huge spike in new repos, followers etc. But why? Did COVID-19 lead to more developers working remotely and engaging in personal or open-source projects? Or was it the launch of GitHub copilot that year? (image below)
+- **COVID-19 impact?**: In last 16 years of GitHub history, year 2021 was a breakout year. It saw huge spike in new repos, followers etc. But why? Did COVID-19 lead to more developers working remotely and engaging in personal or open-source projects? Or was it the launch of GitHub copilot that year? (image below)
 - **JavaScript dominance?**: With 167,565 stars, JavaScript rules Sydney's GitHub languages. This points to strong web-development uptake, especially since users from web company Atlassian and Canva are top contributors
 - **Quality over quantity?**: Many top users have a very low number of repositories despite a large follower count
 - **Weak correlation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
