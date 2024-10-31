@@ -15,10 +15,10 @@ Colab(python) script was created to perform 3 major steps -
 - **Weak correlation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
 
 ## 3. An actionable recommendation for developers based on analysis
-- developers should focus on improving quality of their repos (and not quantity). This can be acheived via better code, clear guidelines on usage and collaboration, regular updates etc. This may lead to improved uptake on followers and community visibility
+- developers should focus on improving quality of their repos (and not quantity). This can be acheived via better code, clear guidelines on usage and collaboration, regular updates etc. It may lead to improved uptake on followers and community visibility
 - since there's a weak negative regression slope of -9.72 between developer's bio and number of followers, it is suggested to keep bios shorter 
 - developers must consider adopting MIT licenses for their repos. This has greatest adoption in Sydney region (may be since it's a very permissive license that allows users to do almost anything they want with your code, including using it in commercial products)
-- [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/), a javascript based diagramming/charting tool language has the highest average number of stars (491) per repository on GitHub Sydney. Developers must leverage it via markdown for easy and better visualisation
+- [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/), a javascript based diagramming/charting tool language has the highest average number of stars (491) per repository on GitHub Sydney. Given the popularity, developers must leverage it for better visualisation and community engagement
  
 ![alt text](https://github.com/sidg75/tds-project1/blob/main/users_trend_by_years.png)
 
