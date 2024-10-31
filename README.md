@@ -9,7 +9,7 @@ Colab(python) script was created to perform 3 major steps -
 - store the data - into two separate CSV files for further analysis
 
 ## 2. Interesting and Surprising facts I found after analysing the data
-- **COVID-19 impact?**: In the last 16 years of GitHub's history, year 2021 was a breakout year (refer graph below). It saw huge spike in creation of new repos and followers. It may be due to COVID-19 pandemic leading more developers to be working remotely and engaging in personal or open-source projects. Also, it coincides with the launch of GitHub [Copilot(AI) that year](https://trends.google.com/trends/explore?date=today%205-y&q=github%20copilot&hl=en)
+- **COVID-19 impact?**: In the last 16 years of GitHub's history, year 2021 was a breakout year (refer graph below). It saw huge spike in creation of new repos and followers. It may be due to COVID-19 pandemic leading more developers to be working remotely and engaging in personal or open-source projects. Also, it coincides with the increased adoption of [GitHub Copilot(AI) that year](https://trends.google.com/trends/explore?date=today%205-y&q=github%20copilot&hl=en)
 - **JavaScript dominance?**: With 167,565 stars, JavaScript rules Sydney's GitHub languages. This points to strong web-development uptake, especially since users from web company Atlassian and Canva are top contributors
 - **Quality over quantity?**: Many top users have a very low number of repositories despite a large follower count
 - **Weak correlation**: between the number of followers and stargazers on repositories (0.067), indicating that having more followers doesn't strongly predict the popularity of a user's repositories
